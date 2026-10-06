@@ -77,7 +77,9 @@ p.plain strong { color:var(--ink); }
 .opnote .ic { font-size:17px; flex:none; }
 .opnote strong { color:var(--ink); }
 .pending { display:inline-flex; align-items:center; gap:6px; font-size:12px; font-weight:700; color:var(--warn); background:var(--warn-bg); border:1px dashed var(--warn); padding:4px 11px; border-radius:999px; margin-top:12px; }
-.refimg { margin-top:14px; border-radius:14px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); max-width:360px; }
+.refimgs { display:grid; grid-template-columns:1fr; gap:14px; margin-top:14px; max-width:600px; }
+@media (min-width:560px) { .refimgs { grid-template-columns:1fr 1fr; } }
+.refimg { border-radius:14px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
 .refimg img { display:block; width:100%; height:auto; }
 .refimg figcaption { font-size:12.5px; color:var(--ink-soft); padding:10px 14px; background:var(--raised); text-align:center; }
 .bairros { display:flex; flex-wrap:wrap; gap:7px; margin:10px 0 0; }
@@ -226,10 +228,16 @@ footer { padding:32px 0 54px; }
   <div class="wrap">
     <div class="sechead"><span class="step-num">7</span><h2>Ideia extra, fora da cozinha</h2></div>
     <p class="plain">Pegar um pedido de delivery e fazer uma mídia na Lagoa: um vídeo como se a pessoa estivesse retirando o pedido na Temakeria e sentando na Lagoa pra comer. Mostra a experiência fora da cozinha.</p>
-    <figure class="refimg">
-      <img src="img/lagoa-araruama.png" alt="Referência: piquenique com caixas da Temakeria à beira da Lagoa" loading="lazy">
-      <figcaption>Temaki de Salmão à Beira-Mar · referência de clima e enquadramento</figcaption>
-    </figure>
+    <div class="refimgs">
+      <figure class="refimg">
+        <img src="img/lagoa-araruama.png" alt="Referência: piquenique com caixas da Temakeria à beira da Lagoa" loading="lazy">
+        <figcaption>Foto de experiência na Lagoa.</figcaption>
+      </figure>
+      <figure class="refimg">
+        <img src="img/temaki-beira-mar.png" alt="Temaki de Salmão à Beira-Mar" loading="lazy">
+        <figcaption>Temaki de Salmão à Beira-Mar</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
